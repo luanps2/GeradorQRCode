@@ -47,13 +47,15 @@ namespace GeradorQRCode
                 {
                     Image imagemQRCode;
 
-                    imagemQRCode = qrCodecEncoder.Encode(nome);
+                    imagemQRCode = qrCodecEncoder.Encode(nome + " - " + cboCurso.Text);
 
 
                     var nomePicturebox = "pbQR" + posicaoContadora;
+                    var nomeUsuario = "lblNome" + posicaoContadora;
 
 
                     var controles = panel1.Controls.Find(nomePicturebox, true);
+                    var nomesusuarios = panel1.Controls.Find(nomeUsuario, true);
 
                     
 
@@ -62,6 +64,11 @@ namespace GeradorQRCode
                         foreach (PictureBox controle in controles)
                         {
                             controle.Image = imagemQRCode;
+                        }
+
+                        foreach (Label nomeusuario in nomesusuarios)
+                        {
+                            nomeusuario.Text = nome;
                         }
                       
                         
@@ -105,10 +112,12 @@ namespace GeradorQRCode
 
         private void button1_Click_1(object sender, EventArgs e)
         {
+            int posicaoContadora = 0;
+            var nomeUsuario = "lblNome" + posicaoContadora;
+            var nomesusuarios = panel1.Controls.Find(nomeUsuario, true);
+
 
             
-
-            int posicaoContadora = 0;
 
             string[] nomes = txtDados.Text.Split(
                  new string[] { Environment.NewLine, ";" },
@@ -120,6 +129,7 @@ namespace GeradorQRCode
 
 
                 var nomePicturebox = "pbQR" + posicaoContadora;
+                var nomeUsuario2 = "lblNome" + posicaoContadora;
 
 
                 var controles = panel1.Controls.Find(nomePicturebox, true);
@@ -132,7 +142,10 @@ namespace GeradorQRCode
                     {
                         controle.Image = null;
                     }
-
+                    foreach (Label nomeusuario in nomesusuarios)
+                    {
+                        nomeusuario.Text = "";
+                    }
 
                 }
 
