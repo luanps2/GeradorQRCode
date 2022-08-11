@@ -30,7 +30,7 @@
         {
             this.btnGerar = new System.Windows.Forms.Button();
             this.txtDados = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cboCurso = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pbQR20 = new System.Windows.Forms.PictureBox();
@@ -101,10 +101,10 @@
             this.txtDados.Size = new System.Drawing.Size(249, 295);
             this.txtDados.TabIndex = 1;
             // 
-            // comboBox1
+            // cboCurso
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cboCurso.FormattingEnabled = true;
+            this.cboCurso.Items.AddRange(new object[] {
             "Aux. Administrativo",
             "Cabelereiro",
             "Cozinha Industrial",
@@ -117,10 +117,10 @@
             "Promotor de Vendas",
             "Teatro",
             "CJ"});
-            this.comboBox1.Location = new System.Drawing.Point(12, 416);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(249, 23);
-            this.comboBox1.TabIndex = 3;
+            this.cboCurso.Location = new System.Drawing.Point(12, 416);
+            this.cboCurso.Name = "cboCurso";
+            this.cboCurso.Size = new System.Drawing.Size(249, 23);
+            this.cboCurso.TabIndex = 3;
             // 
             // label1
             // 
@@ -343,6 +343,7 @@
             this.button2.TabIndex = 7;
             this.button2.Text = "Salvar Imagens";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label2
             // 
@@ -375,7 +376,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cboCurso);
             this.Controls.Add(this.txtDados);
             this.Controls.Add(this.btnGerar);
             this.Name = "Form1";
@@ -411,7 +412,7 @@
 
         private Button btnGerar;
         private TextBox txtDados;
-        private ComboBox comboBox1;
+        private ComboBox cboCurso;
         private Label label1;
         private Panel panel1;
         private PictureBox pbQR20;

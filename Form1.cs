@@ -30,23 +30,80 @@ namespace GeradorQRCode
                 qrCodecEncoder.QRCodeVersion = 0;
                 qrCodecEncoder.QRCodeErrorCorrect = QRCodeEncoder.ERROR_CORRECTION.Q;
 
+                string[] linhas = txtDados.Text.Split(
+                    new string[] { Environment.NewLine, ";"},
+                       StringSplitOptions.None);
 
-                Image imagemQRCode;
-                //string a ser Gerada
-                String dados = txtDados.Text + "-" + comboBox1.Text;
-                imagemQRCode = qrCodecEncoder.Encode(dados);
-                pbQR1.Image = imagemQRCode;
+                var pictureBoxList = new List<PictureBox>();
+
+                foreach (var i in pictureBoxList)
+                {
+                    Image imagemQRCode;
+                    String dados = linhas[Convert.ToInt32(i)] + " - " + cboCurso.Text;
+                    imagemQRCode = qrCodecEncoder.Encode(dados);
+
+                    var nomePicturebox = "pbQR" + i;
+
+                    var controles = this.Controls.Find(nomePicturebox,true);
+
+                    if (controles.Length > 0)
+                    {
+                        PictureBox pictureBox = (PictureBox)controles[0];
+                        pictureBox.Image = imagemQRCode;
+                    }
+                    
+                    
+                }
+
+                    
+                    //string a ser Gerada
+
+                   
+
+
+                    
+
+                    
+
+                   
+                    
+
+                    
+
+                    
+
+                
             }
             catch (Exception ex)
             {
 
                 MessageBox.Show("Erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+          
+
+          
+           
+
+
+            //txtDados.Text = i.ToString();
+
         }
 
         private void button1_Click_1(object sender, EventArgs e)
         {
             txtDados.Text = "";
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            string[] linhas = txtDados.Text.Split(
+                     new string[] { Environment.NewLine },
+                        StringSplitOptions.None);
+
+            MessageBox.Show(linhas.First());
+        }
     }
+
+
 }
+
