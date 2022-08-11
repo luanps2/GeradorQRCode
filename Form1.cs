@@ -26,7 +26,7 @@ namespace GeradorQRCode
                 qrCodecEncoder.QRCodeForegroundColor = System.Drawing.Color.Black;
                 qrCodecEncoder.CharacterSet = "UTF-8";
                 qrCodecEncoder.QRCodeEncodeMode = QRCodeEncoder.ENCODE_MODE.BYTE;
-                qrCodecEncoder.QRCodeScale = 4;
+                qrCodecEncoder.QRCodeScale = 3;
                 qrCodecEncoder.QRCodeVersion = 0;
                 qrCodecEncoder.QRCodeErrorCorrect = QRCodeEncoder.ERROR_CORRECTION.Q;
 
@@ -86,20 +86,6 @@ namespace GeradorQRCode
                     
                     //string a ser Gerada
 
-                   
-
-
-                    
-
-                    
-
-                   
-                    
-
-                    
-
-                    
-
                 
             }
             catch (Exception ex)
@@ -119,8 +105,54 @@ namespace GeradorQRCode
 
         private void button1_Click_1(object sender, EventArgs e)
         {
+
+            
+
+            int posicaoContadora = 0;
+
+            string[] nomes = txtDados.Text.Split(
+                 new string[] { Environment.NewLine, ";" },
+                    StringSplitOptions.None);
+
+            foreach (var nome in nomes)
+            {
+               
+
+
+                var nomePicturebox = "pbQR" + posicaoContadora;
+
+
+                var controles = panel1.Controls.Find(nomePicturebox, true);
+
+
+
+                if (controles.Length > 0)
+                {
+                    foreach (PictureBox controle in controles)
+                    {
+                        controle.Image = null;
+                    }
+
+
+                }
+
+                //PictureBox pictureBox = new PictureBox
+                //{
+                //    Name = "pbQR",
+                //    Size = new Size(100, 100),
+                //    Image = imagemQRCode,
+                //    SizeMode = PictureBoxSizeMode.CenterImage
+                //};
+
+                //pictureBox.Visible = true;
+                //pictureBox.Show();
+
+
+                //panel1.Controls.Add(pictureBox);
+                posicaoContadora++;
+            }
             txtDados.Text = "";
-            panel1.Controls.Clear();
+
         }
 
         private void button2_Click(object sender, EventArgs e)
