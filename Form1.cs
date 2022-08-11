@@ -26,33 +26,61 @@ namespace GeradorQRCode
                 qrCodecEncoder.QRCodeForegroundColor = System.Drawing.Color.Black;
                 qrCodecEncoder.CharacterSet = "UTF-8";
                 qrCodecEncoder.QRCodeEncodeMode = QRCodeEncoder.ENCODE_MODE.BYTE;
-                qrCodecEncoder.QRCodeScale = 2;
+                qrCodecEncoder.QRCodeScale = 4;
                 qrCodecEncoder.QRCodeVersion = 0;
                 qrCodecEncoder.QRCodeErrorCorrect = QRCodeEncoder.ERROR_CORRECTION.Q;
 
-                string[] linhas = txtDados.Text.Split(
+                string[] nomes = txtDados.Text.Split(
                     new string[] { Environment.NewLine, ";"},
                        StringSplitOptions.None);
 
                 var pictureBoxList = new List<PictureBox>();
 
-                foreach (var i in pictureBoxList)
+                int posicaoContadora = 0;
+
+                
+
+                var largura = (Convert.ToInt32(panel1.Size.Width.ToString()) / 5) - 5;
+                var altura = (Convert.ToInt32(panel1.Size.Height.ToString()) / 4) - 5;
+
+                foreach (var nome in nomes)
                 {
                     Image imagemQRCode;
-                    String dados = linhas[Convert.ToInt32(i)] + " - " + cboCurso.Text;
-                    imagemQRCode = qrCodecEncoder.Encode(dados);
 
-                    var nomePicturebox = "pbQR" + i;
+                    imagemQRCode = qrCodecEncoder.Encode(nome);
 
-                    var controles = this.Controls.Find(nomePicturebox,true);
+
+                    var nomePicturebox = "pbQR" + posicaoContadora;
+
+
+                    var controles = panel1.Controls.Find(nomePicturebox, true);
+
+                    
 
                     if (controles.Length > 0)
                     {
-                        PictureBox pictureBox = (PictureBox)controles[0];
-                        pictureBox.Image = imagemQRCode;
+                        foreach (PictureBox controle in controles)
+                        {
+                            controle.Image = imagemQRCode;
+                        }
+                      
+                        
                     }
-                    
-                    
+
+                    //PictureBox pictureBox = new PictureBox
+                    //{
+                    //    Name = "pbQR",
+                    //    Size = new Size(100, 100),
+                    //    Image = imagemQRCode,
+                    //    SizeMode = PictureBoxSizeMode.CenterImage
+                    //};
+
+                    //pictureBox.Visible = true;
+                    //pictureBox.Show();
+
+
+                    //panel1.Controls.Add(pictureBox);
+                    posicaoContadora++;
                 }
 
                     
@@ -92,6 +120,7 @@ namespace GeradorQRCode
         private void button1_Click_1(object sender, EventArgs e)
         {
             txtDados.Text = "";
+            panel1.Controls.Clear();
         }
 
         private void button2_Click(object sender, EventArgs e)
