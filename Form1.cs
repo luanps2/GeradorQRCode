@@ -142,6 +142,7 @@ namespace GeradorQRCode
                     {
                         controle.Image = null;
                     }
+
                     foreach (Label nomeusuario in nomesusuarios)
                     {
                         nomeusuario.Text = "";
