@@ -31,8 +31,28 @@
             this.btnGerar = new System.Windows.Forms.Button();
             this.txtDados = new System.Windows.Forms.TextBox();
             this.cboCurso = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblTitulo = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblNome19 = new System.Windows.Forms.Label();
+            this.lblNome18 = new System.Windows.Forms.Label();
+            this.lblNome14 = new System.Windows.Forms.Label();
+            this.lblNome13 = new System.Windows.Forms.Label();
+            this.lblNome9 = new System.Windows.Forms.Label();
+            this.lblNome17 = new System.Windows.Forms.Label();
+            this.lblNome8 = new System.Windows.Forms.Label();
+            this.lblNome12 = new System.Windows.Forms.Label();
+            this.lblNome4 = new System.Windows.Forms.Label();
+            this.lblNome16 = new System.Windows.Forms.Label();
+            this.lblNome7 = new System.Windows.Forms.Label();
+            this.lblNome11 = new System.Windows.Forms.Label();
+            this.lblNome3 = new System.Windows.Forms.Label();
+            this.lblNome15 = new System.Windows.Forms.Label();
+            this.lblNome6 = new System.Windows.Forms.Label();
+            this.lblNome10 = new System.Windows.Forms.Label();
+            this.lblNome2 = new System.Windows.Forms.Label();
+            this.lblNome5 = new System.Windows.Forms.Label();
+            this.lblNome1 = new System.Windows.Forms.Label();
+            this.lblNome0 = new System.Windows.Forms.Label();
             this.pbQR19 = new System.Windows.Forms.PictureBox();
             this.pbQR14 = new System.Windows.Forms.PictureBox();
             this.pbQR18 = new System.Windows.Forms.PictureBox();
@@ -55,8 +75,8 @@
             this.pbQR0 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblInsiraNomes = new System.Windows.Forms.Label();
+            this.lblSelecioneCurso = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbQR19)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbQR14)).BeginInit();
@@ -122,18 +142,38 @@
             this.cboCurso.Size = new System.Drawing.Size(249, 23);
             this.cboCurso.TabIndex = 3;
             // 
-            // label1
+            // lblTitulo
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(209, 18);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(703, 30);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Sistema Gerador QRCode - Fundação Lar de São bento Casa Dom Macário";
+            this.lblTitulo.AutoSize = true;
+            this.lblTitulo.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblTitulo.Location = new System.Drawing.Point(209, 18);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(703, 30);
+            this.lblTitulo.TabIndex = 4;
+            this.lblTitulo.Text = "Sistema Gerador QRCode - Fundação Lar de São bento Casa Dom Macário";
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.lblNome19);
+            this.panel1.Controls.Add(this.lblNome18);
+            this.panel1.Controls.Add(this.lblNome14);
+            this.panel1.Controls.Add(this.lblNome13);
+            this.panel1.Controls.Add(this.lblNome9);
+            this.panel1.Controls.Add(this.lblNome17);
+            this.panel1.Controls.Add(this.lblNome8);
+            this.panel1.Controls.Add(this.lblNome12);
+            this.panel1.Controls.Add(this.lblNome4);
+            this.panel1.Controls.Add(this.lblNome16);
+            this.panel1.Controls.Add(this.lblNome7);
+            this.panel1.Controls.Add(this.lblNome11);
+            this.panel1.Controls.Add(this.lblNome3);
+            this.panel1.Controls.Add(this.lblNome15);
+            this.panel1.Controls.Add(this.lblNome6);
+            this.panel1.Controls.Add(this.lblNome10);
+            this.panel1.Controls.Add(this.lblNome2);
+            this.panel1.Controls.Add(this.lblNome5);
+            this.panel1.Controls.Add(this.lblNome1);
+            this.panel1.Controls.Add(this.lblNome0);
             this.panel1.Controls.Add(this.pbQR19);
             this.panel1.Controls.Add(this.pbQR14);
             this.panel1.Controls.Add(this.pbQR18);
@@ -156,12 +196,193 @@
             this.panel1.Controls.Add(this.pbQR0);
             this.panel1.Location = new System.Drawing.Point(273, 66);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(850, 550);
+            this.panel1.Size = new System.Drawing.Size(993, 589);
             this.panel1.TabIndex = 5;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // lblNome19
+            // 
+            this.lblNome19.AutoSize = true;
+            this.lblNome19.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblNome19.Location = new System.Drawing.Point(788, 523);
+            this.lblNome19.Name = "lblNome19";
+            this.lblNome19.Size = new System.Drawing.Size(0, 13);
+            this.lblNome19.TabIndex = 4;
+            // 
+            // lblNome18
+            // 
+            this.lblNome18.AutoSize = true;
+            this.lblNome18.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblNome18.Location = new System.Drawing.Point(594, 523);
+            this.lblNome18.Name = "lblNome18";
+            this.lblNome18.Size = new System.Drawing.Size(0, 13);
+            this.lblNome18.TabIndex = 4;
+            // 
+            // lblNome14
+            // 
+            this.lblNome14.AutoSize = true;
+            this.lblNome14.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblNome14.Location = new System.Drawing.Point(788, 390);
+            this.lblNome14.Name = "lblNome14";
+            this.lblNome14.Size = new System.Drawing.Size(0, 13);
+            this.lblNome14.TabIndex = 4;
+            // 
+            // lblNome13
+            // 
+            this.lblNome13.AutoSize = true;
+            this.lblNome13.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblNome13.Location = new System.Drawing.Point(594, 390);
+            this.lblNome13.Name = "lblNome13";
+            this.lblNome13.Size = new System.Drawing.Size(0, 13);
+            this.lblNome13.TabIndex = 4;
+            // 
+            // lblNome9
+            // 
+            this.lblNome9.AutoSize = true;
+            this.lblNome9.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblNome9.Location = new System.Drawing.Point(788, 257);
+            this.lblNome9.Name = "lblNome9";
+            this.lblNome9.Size = new System.Drawing.Size(0, 13);
+            this.lblNome9.TabIndex = 4;
+            // 
+            // lblNome17
+            // 
+            this.lblNome17.AutoSize = true;
+            this.lblNome17.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblNome17.Location = new System.Drawing.Point(402, 523);
+            this.lblNome17.Name = "lblNome17";
+            this.lblNome17.Size = new System.Drawing.Size(0, 13);
+            this.lblNome17.TabIndex = 4;
+            // 
+            // lblNome8
+            // 
+            this.lblNome8.AutoSize = true;
+            this.lblNome8.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblNome8.Location = new System.Drawing.Point(594, 257);
+            this.lblNome8.Name = "lblNome8";
+            this.lblNome8.Size = new System.Drawing.Size(0, 13);
+            this.lblNome8.TabIndex = 4;
+            // 
+            // lblNome12
+            // 
+            this.lblNome12.AutoSize = true;
+            this.lblNome12.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblNome12.Location = new System.Drawing.Point(402, 390);
+            this.lblNome12.Name = "lblNome12";
+            this.lblNome12.Size = new System.Drawing.Size(0, 13);
+            this.lblNome12.TabIndex = 4;
+            // 
+            // lblNome4
+            // 
+            this.lblNome4.AutoSize = true;
+            this.lblNome4.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblNome4.Location = new System.Drawing.Point(788, 123);
+            this.lblNome4.Name = "lblNome4";
+            this.lblNome4.Size = new System.Drawing.Size(0, 13);
+            this.lblNome4.TabIndex = 4;
+            // 
+            // lblNome16
+            // 
+            this.lblNome16.AutoSize = true;
+            this.lblNome16.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblNome16.Location = new System.Drawing.Point(209, 523);
+            this.lblNome16.Name = "lblNome16";
+            this.lblNome16.Size = new System.Drawing.Size(0, 13);
+            this.lblNome16.TabIndex = 4;
+            // 
+            // lblNome7
+            // 
+            this.lblNome7.AutoSize = true;
+            this.lblNome7.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblNome7.Location = new System.Drawing.Point(402, 257);
+            this.lblNome7.Name = "lblNome7";
+            this.lblNome7.Size = new System.Drawing.Size(0, 13);
+            this.lblNome7.TabIndex = 4;
+            // 
+            // lblNome11
+            // 
+            this.lblNome11.AutoSize = true;
+            this.lblNome11.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblNome11.Location = new System.Drawing.Point(209, 390);
+            this.lblNome11.Name = "lblNome11";
+            this.lblNome11.Size = new System.Drawing.Size(0, 13);
+            this.lblNome11.TabIndex = 4;
+            // 
+            // lblNome3
+            // 
+            this.lblNome3.AutoSize = true;
+            this.lblNome3.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblNome3.Location = new System.Drawing.Point(594, 123);
+            this.lblNome3.Name = "lblNome3";
+            this.lblNome3.Size = new System.Drawing.Size(0, 13);
+            this.lblNome3.TabIndex = 4;
+            // 
+            // lblNome15
+            // 
+            this.lblNome15.AutoSize = true;
+            this.lblNome15.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblNome15.Location = new System.Drawing.Point(10, 523);
+            this.lblNome15.Name = "lblNome15";
+            this.lblNome15.Size = new System.Drawing.Size(0, 13);
+            this.lblNome15.TabIndex = 4;
+            // 
+            // lblNome6
+            // 
+            this.lblNome6.AutoSize = true;
+            this.lblNome6.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblNome6.Location = new System.Drawing.Point(209, 257);
+            this.lblNome6.Name = "lblNome6";
+            this.lblNome6.Size = new System.Drawing.Size(0, 13);
+            this.lblNome6.TabIndex = 4;
+            // 
+            // lblNome10
+            // 
+            this.lblNome10.AutoSize = true;
+            this.lblNome10.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblNome10.Location = new System.Drawing.Point(10, 390);
+            this.lblNome10.Name = "lblNome10";
+            this.lblNome10.Size = new System.Drawing.Size(0, 13);
+            this.lblNome10.TabIndex = 4;
+            // 
+            // lblNome2
+            // 
+            this.lblNome2.AutoSize = true;
+            this.lblNome2.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblNome2.Location = new System.Drawing.Point(402, 123);
+            this.lblNome2.Name = "lblNome2";
+            this.lblNome2.Size = new System.Drawing.Size(0, 13);
+            this.lblNome2.TabIndex = 4;
+            // 
+            // lblNome5
+            // 
+            this.lblNome5.AutoSize = true;
+            this.lblNome5.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblNome5.Location = new System.Drawing.Point(10, 257);
+            this.lblNome5.Name = "lblNome5";
+            this.lblNome5.Size = new System.Drawing.Size(0, 13);
+            this.lblNome5.TabIndex = 4;
+            // 
+            // lblNome1
+            // 
+            this.lblNome1.AutoSize = true;
+            this.lblNome1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblNome1.Location = new System.Drawing.Point(209, 123);
+            this.lblNome1.Name = "lblNome1";
+            this.lblNome1.Size = new System.Drawing.Size(0, 13);
+            this.lblNome1.TabIndex = 4;
+            // 
+            // lblNome0
+            // 
+            this.lblNome0.AutoSize = true;
+            this.lblNome0.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblNome0.Location = new System.Drawing.Point(10, 123);
+            this.lblNome0.Name = "lblNome0";
+            this.lblNome0.Size = new System.Drawing.Size(0, 13);
+            this.lblNome0.TabIndex = 4;
             // 
             // pbQR19
             // 
-            this.pbQR19.Location = new System.Drawing.Point(724, 420);
+            this.pbQR19.Location = new System.Drawing.Point(788, 420);
             this.pbQR19.Name = "pbQR19";
             this.pbQR19.Size = new System.Drawing.Size(100, 100);
             this.pbQR19.TabIndex = 3;
@@ -169,7 +390,7 @@
             // 
             // pbQR14
             // 
-            this.pbQR14.Location = new System.Drawing.Point(724, 287);
+            this.pbQR14.Location = new System.Drawing.Point(788, 287);
             this.pbQR14.Name = "pbQR14";
             this.pbQR14.Size = new System.Drawing.Size(100, 100);
             this.pbQR14.TabIndex = 3;
@@ -177,7 +398,7 @@
             // 
             // pbQR18
             // 
-            this.pbQR18.Location = new System.Drawing.Point(551, 420);
+            this.pbQR18.Location = new System.Drawing.Point(594, 420);
             this.pbQR18.Name = "pbQR18";
             this.pbQR18.Size = new System.Drawing.Size(100, 100);
             this.pbQR18.TabIndex = 3;
@@ -185,7 +406,7 @@
             // 
             // pbQR13
             // 
-            this.pbQR13.Location = new System.Drawing.Point(551, 287);
+            this.pbQR13.Location = new System.Drawing.Point(594, 287);
             this.pbQR13.Name = "pbQR13";
             this.pbQR13.Size = new System.Drawing.Size(100, 100);
             this.pbQR13.TabIndex = 3;
@@ -193,7 +414,7 @@
             // 
             // pbQR9
             // 
-            this.pbQR9.Location = new System.Drawing.Point(724, 154);
+            this.pbQR9.Location = new System.Drawing.Point(788, 154);
             this.pbQR9.Name = "pbQR9";
             this.pbQR9.Size = new System.Drawing.Size(100, 100);
             this.pbQR9.TabIndex = 3;
@@ -201,7 +422,7 @@
             // 
             // pbQR8
             // 
-            this.pbQR8.Location = new System.Drawing.Point(551, 154);
+            this.pbQR8.Location = new System.Drawing.Point(594, 154);
             this.pbQR8.Name = "pbQR8";
             this.pbQR8.Size = new System.Drawing.Size(100, 100);
             this.pbQR8.TabIndex = 3;
@@ -209,7 +430,7 @@
             // 
             // pbQR17
             // 
-            this.pbQR17.Location = new System.Drawing.Point(374, 420);
+            this.pbQR17.Location = new System.Drawing.Point(402, 420);
             this.pbQR17.Name = "pbQR17";
             this.pbQR17.Size = new System.Drawing.Size(100, 100);
             this.pbQR17.TabIndex = 3;
@@ -217,7 +438,7 @@
             // 
             // pbQR12
             // 
-            this.pbQR12.Location = new System.Drawing.Point(374, 287);
+            this.pbQR12.Location = new System.Drawing.Point(402, 287);
             this.pbQR12.Name = "pbQR12";
             this.pbQR12.Size = new System.Drawing.Size(100, 100);
             this.pbQR12.TabIndex = 3;
@@ -225,7 +446,7 @@
             // 
             // pbQR4
             // 
-            this.pbQR4.Location = new System.Drawing.Point(724, 20);
+            this.pbQR4.Location = new System.Drawing.Point(788, 20);
             this.pbQR4.Name = "pbQR4";
             this.pbQR4.Size = new System.Drawing.Size(100, 100);
             this.pbQR4.TabIndex = 3;
@@ -233,7 +454,7 @@
             // 
             // pbQR7
             // 
-            this.pbQR7.Location = new System.Drawing.Point(374, 154);
+            this.pbQR7.Location = new System.Drawing.Point(402, 154);
             this.pbQR7.Name = "pbQR7";
             this.pbQR7.Size = new System.Drawing.Size(100, 100);
             this.pbQR7.TabIndex = 3;
@@ -241,7 +462,7 @@
             // 
             // pbQR16
             // 
-            this.pbQR16.Location = new System.Drawing.Point(184, 420);
+            this.pbQR16.Location = new System.Drawing.Point(209, 420);
             this.pbQR16.Name = "pbQR16";
             this.pbQR16.Size = new System.Drawing.Size(100, 100);
             this.pbQR16.TabIndex = 3;
@@ -249,7 +470,7 @@
             // 
             // pbQR11
             // 
-            this.pbQR11.Location = new System.Drawing.Point(184, 287);
+            this.pbQR11.Location = new System.Drawing.Point(209, 287);
             this.pbQR11.Name = "pbQR11";
             this.pbQR11.Size = new System.Drawing.Size(100, 100);
             this.pbQR11.TabIndex = 3;
@@ -257,7 +478,7 @@
             // 
             // pbQR3
             // 
-            this.pbQR3.Location = new System.Drawing.Point(551, 20);
+            this.pbQR3.Location = new System.Drawing.Point(594, 20);
             this.pbQR3.Name = "pbQR3";
             this.pbQR3.Size = new System.Drawing.Size(100, 100);
             this.pbQR3.TabIndex = 3;
@@ -265,7 +486,7 @@
             // 
             // pbQR6
             // 
-            this.pbQR6.Location = new System.Drawing.Point(184, 154);
+            this.pbQR6.Location = new System.Drawing.Point(209, 154);
             this.pbQR6.Name = "pbQR6";
             this.pbQR6.Size = new System.Drawing.Size(100, 100);
             this.pbQR6.TabIndex = 3;
@@ -273,7 +494,7 @@
             // 
             // pbQR15
             // 
-            this.pbQR15.Location = new System.Drawing.Point(26, 420);
+            this.pbQR15.Location = new System.Drawing.Point(10, 420);
             this.pbQR15.Name = "pbQR15";
             this.pbQR15.Size = new System.Drawing.Size(100, 100);
             this.pbQR15.TabIndex = 3;
@@ -281,7 +502,7 @@
             // 
             // pbQR10
             // 
-            this.pbQR10.Location = new System.Drawing.Point(26, 287);
+            this.pbQR10.Location = new System.Drawing.Point(10, 287);
             this.pbQR10.Name = "pbQR10";
             this.pbQR10.Size = new System.Drawing.Size(100, 100);
             this.pbQR10.TabIndex = 3;
@@ -289,7 +510,7 @@
             // 
             // pbQR2
             // 
-            this.pbQR2.Location = new System.Drawing.Point(374, 20);
+            this.pbQR2.Location = new System.Drawing.Point(402, 20);
             this.pbQR2.Name = "pbQR2";
             this.pbQR2.Size = new System.Drawing.Size(100, 100);
             this.pbQR2.TabIndex = 3;
@@ -297,7 +518,7 @@
             // 
             // pbQR5
             // 
-            this.pbQR5.Location = new System.Drawing.Point(26, 154);
+            this.pbQR5.Location = new System.Drawing.Point(10, 154);
             this.pbQR5.Name = "pbQR5";
             this.pbQR5.Size = new System.Drawing.Size(100, 100);
             this.pbQR5.TabIndex = 3;
@@ -305,7 +526,7 @@
             // 
             // pbQR1
             // 
-            this.pbQR1.Location = new System.Drawing.Point(184, 20);
+            this.pbQR1.Location = new System.Drawing.Point(209, 20);
             this.pbQR1.Name = "pbQR1";
             this.pbQR1.Size = new System.Drawing.Size(100, 100);
             this.pbQR1.TabIndex = 3;
@@ -313,7 +534,7 @@
             // 
             // pbQR0
             // 
-            this.pbQR0.Location = new System.Drawing.Point(26, 20);
+            this.pbQR0.Location = new System.Drawing.Point(10, 20);
             this.pbQR0.Name = "pbQR0";
             this.pbQR0.Size = new System.Drawing.Size(100, 100);
             this.pbQR0.TabIndex = 3;
@@ -339,43 +560,43 @@
             this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.Location = new System.Drawing.Point(6, 517);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(255, 56);
+            this.button2.Size = new System.Drawing.Size(255, 59);
             this.button2.TabIndex = 7;
             this.button2.Text = "Salvar Imagens";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // label2
+            // lblInsiraNomes
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(12, 62);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(122, 21);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "Insira os nomes:";
+            this.lblInsiraNomes.AutoSize = true;
+            this.lblInsiraNomes.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblInsiraNomes.Location = new System.Drawing.Point(12, 62);
+            this.lblInsiraNomes.Name = "lblInsiraNomes";
+            this.lblInsiraNomes.Size = new System.Drawing.Size(122, 21);
+            this.lblInsiraNomes.TabIndex = 8;
+            this.lblInsiraNomes.Text = "Insira os nomes:";
             // 
-            // label3
+            // lblSelecioneCurso
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(12, 392);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(134, 21);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "Selecione o curso:";
+            this.lblSelecioneCurso.AutoSize = true;
+            this.lblSelecioneCurso.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblSelecioneCurso.Location = new System.Drawing.Point(12, 392);
+            this.lblSelecioneCurso.Name = "lblSelecioneCurso";
+            this.lblSelecioneCurso.Size = new System.Drawing.Size(134, 21);
+            this.lblSelecioneCurso.TabIndex = 8;
+            this.lblSelecioneCurso.Text = "Selecione o curso:";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1133, 629);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
+            this.ClientSize = new System.Drawing.Size(1278, 667);
+            this.Controls.Add(this.lblSelecioneCurso);
+            this.Controls.Add(this.lblInsiraNomes);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.cboCurso);
             this.Controls.Add(this.txtDados);
             this.Controls.Add(this.btnGerar);
@@ -383,6 +604,7 @@
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbQR19)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbQR14)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbQR18)).EndInit();
@@ -413,7 +635,7 @@
         private Button btnGerar;
         private TextBox txtDados;
         private ComboBox cboCurso;
-        private Label label1;
+        private Label lblTitulo;
         private Panel panel1;
         private PictureBox pbQR19;
         private PictureBox pbQR14;
@@ -437,7 +659,27 @@
         private PictureBox pbQR0;
         private Button button1;
         private Button button2;
-        private Label label2;
-        private Label label3;
+        private Label lblInsiraNomes;
+        private Label lblSelecioneCurso;
+        private Label lblNome0;
+        private Label lblNome19;
+        private Label lblNome18;
+        private Label lblNome14;
+        private Label lblNome13;
+        private Label lblNome9;
+        private Label lblNome17;
+        private Label lblNome8;
+        private Label lblNome12;
+        private Label lblNome4;
+        private Label lblNome16;
+        private Label lblNome7;
+        private Label lblNome11;
+        private Label lblNome3;
+        private Label lblNome15;
+        private Label lblNome6;
+        private Label lblNome10;
+        private Label lblNome2;
+        private Label lblNome5;
+        private Label lblNome1;
     }
 }
