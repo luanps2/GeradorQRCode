@@ -10,11 +10,40 @@ namespace GeradorQRCode
         public Form1()
         {
             InitializeComponent();
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            Limpar();
+            dpAno.Format = DateTimePickerFormat.Custom;
+            dpAno.CustomFormat = "yyyy";
+            dpAno.ShowUpDown = true;
+
+            lblNome0.Text = "";
+            lblNome1.Text = "";
+            lblNome2.Text = "";
+            lblNome3.Text = "";
+            lblNome4.Text = "";
+            lblNome5.Text = "";
+            lblNome6.Text = "";
+            lblNome7.Text = "";
+            lblNome8.Text = "";
+            lblNome9.Text = "";
+            lblNome10.Text = "";
+            lblNome11.Text = "";
+            lblNome12.Text = "";
+            lblNome13.Text = "";
+            lblNome14.Text = "";
+            lblNome15.Text = "";
+            lblNome16.Text = "";
+            lblNome17.Text = "";
+            lblNome18.Text = "";
+            lblNome19.Text = "";
+            lblNome20.Text = "";
+            lblNome21.Text = "";
+            lblNome22.Text = "";
+            lblNome23.Text = "";
+            lblNome24.Text = "";
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -31,14 +60,14 @@ namespace GeradorQRCode
                 qrCodecEncoder.QRCodeErrorCorrect = QRCodeEncoder.ERROR_CORRECTION.Q;
 
                 string[] nomes = txtDados.Text.Split(
-                    new string[] { Environment.NewLine, ";"},
+                    new string[] { Environment.NewLine, ";" },
                        StringSplitOptions.None);
 
                 var pictureBoxList = new List<PictureBox>();
 
                 int posicaoContadora = 0;
 
-                
+
 
                 //var largura = (Convert.ToInt32(panel1.Size.Width.ToString()) / 5) - 5;
                 //var altura = (Convert.ToInt32(panel1.Size.Height.ToString()) / 4) - 5;
@@ -57,7 +86,7 @@ namespace GeradorQRCode
                     var imgsQR = panel1.Controls.Find(nomePicturebox, true);
                     var nomesQR = panel1.Controls.Find(nomeLabel, true);
 
-                    
+
 
                     if (imgsQR.Length > 0)
                     {
@@ -71,12 +100,12 @@ namespace GeradorQRCode
                             nomeQR.Text = nome;
                         }
 
-                        foreach (Label nomeusuario in nomesusuarios)
+                        foreach (Label nomeusuario in nomesQR)
                         {
                             nomeusuario.Text = nome;
                         }
-                      
-                        
+
+
                     }
 
                     //PictureBox pictureBox = new PictureBox
@@ -95,20 +124,20 @@ namespace GeradorQRCode
                     posicaoContadora++;
                 }
 
-                    
-                    //string a ser Gerada
 
-                
+                //string a ser Gerada
+
+
             }
             catch (Exception ex)
             {
 
                 MessageBox.Show("Erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-          
 
-          
-           
+
+
+
 
 
             //txtDados.Text = i.ToString();
@@ -117,16 +146,47 @@ namespace GeradorQRCode
 
         private void button1_Click_1(object sender, EventArgs e)
         {
+
             Limpar();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            string[] linhas = txtDados.Text.Split(
-                     new string[] { Environment.NewLine },
-                        StringSplitOptions.None);
+            int posicaoContadora = 0;
 
-            MessageBox.Show(linhas.First());
+            var nomePicturebox = "pbQR" + posicaoContadora;
+
+            var imgsQR = panel1.Controls.Find(nomePicturebox, true);
+
+            string user = Directory.GetParent(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData)).FullName;
+            if (Environment.OSVersion.Version.Major >= 6)
+            {
+                user = Directory.GetParent(user).ToString();
+            }
+
+            string path = @user + "\\" + "Pictures" + "\\" + "QRCodes" + "\\" + cboCurso.Text + "\\" + dpAno.Text + " - " + cbSemestre.Text;
+
+            //string path = @"C:" + "\\" + cboCurso.Text + "\\" +  dpAno.Text + " - " + cbSemestre.Text;
+
+            using (SaveFileDialog saveFileDialog = new SaveFileDialog() { Filter = @"" })
+            {
+
+                if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    foreach (PictureBox imgQR in imgsQR)
+                    {
+                        if (imgQR.Image != null)
+                        {
+                            imgQR.Image.Save(path + @"\" + imgQR + ".png");
+                            posicaoContadora++;
+                        }
+                    }
+                  
+                   
+                   
+                }
+            }
+
         }
 
 
@@ -187,6 +247,43 @@ namespace GeradorQRCode
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void lblNome0_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblNome1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblNome2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblNome3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblNome4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            string user = Directory.GetParent(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData)).FullName;
+            if (Environment.OSVersion.Version.Major >= 6)
+            {
+                user = Directory.GetParent(user).ToString();
+            }
+           
+            string path = @user + "\\" + "Pictures" + "\\" +"QRCodes" + "\\" +cboCurso.Text + "\\" + dpAno.Text + " - " + cbSemestre.Text;
+            MessageBox.Show(path);
         }
     }
 
