@@ -70,6 +70,11 @@ namespace GeradorQRCode
                         {
                             nomeQR.Text = nome;
                         }
+
+                        foreach (Label nomeusuario in nomesusuarios)
+                        {
+                            nomeusuario.Text = nome;
+                        }
                       
                         
                     }
