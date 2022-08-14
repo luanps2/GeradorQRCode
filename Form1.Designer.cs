@@ -33,39 +33,49 @@
             this.cboCurso = new System.Windows.Forms.ComboBox();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pbQR24 = new System.Windows.Forms.PictureBox();
+            this.lblNome24 = new System.Windows.Forms.Label();
             this.pbQR19 = new System.Windows.Forms.PictureBox();
             this.lblNome19 = new System.Windows.Forms.Label();
             this.lblNome14 = new System.Windows.Forms.Label();
             this.lblNome9 = new System.Windows.Forms.Label();
+            this.lblNome23 = new System.Windows.Forms.Label();
             this.lblNome4 = new System.Windows.Forms.Label();
             this.lblNome18 = new System.Windows.Forms.Label();
             this.lblNome13 = new System.Windows.Forms.Label();
             this.lblNome8 = new System.Windows.Forms.Label();
+            this.lblNome22 = new System.Windows.Forms.Label();
             this.lblNome3 = new System.Windows.Forms.Label();
             this.lblNome17 = new System.Windows.Forms.Label();
             this.lblNome12 = new System.Windows.Forms.Label();
             this.lblNome7 = new System.Windows.Forms.Label();
+            this.lblNome21 = new System.Windows.Forms.Label();
             this.lblNome2 = new System.Windows.Forms.Label();
             this.lblNome16 = new System.Windows.Forms.Label();
             this.lblNome11 = new System.Windows.Forms.Label();
             this.lblNome6 = new System.Windows.Forms.Label();
+            this.lblNome20 = new System.Windows.Forms.Label();
             this.lblNome1 = new System.Windows.Forms.Label();
             this.lblNome15 = new System.Windows.Forms.Label();
             this.lblNome10 = new System.Windows.Forms.Label();
             this.lblNome5 = new System.Windows.Forms.Label();
             this.lblNome0 = new System.Windows.Forms.Label();
+            this.pbQR23 = new System.Windows.Forms.PictureBox();
             this.pbQR14 = new System.Windows.Forms.PictureBox();
             this.pbQR18 = new System.Windows.Forms.PictureBox();
             this.pbQR13 = new System.Windows.Forms.PictureBox();
             this.pbQR9 = new System.Windows.Forms.PictureBox();
+            this.pbQR22 = new System.Windows.Forms.PictureBox();
             this.pbQR8 = new System.Windows.Forms.PictureBox();
             this.pbQR17 = new System.Windows.Forms.PictureBox();
             this.pbQR12 = new System.Windows.Forms.PictureBox();
             this.pbQR4 = new System.Windows.Forms.PictureBox();
+            this.pbQR21 = new System.Windows.Forms.PictureBox();
             this.pbQR7 = new System.Windows.Forms.PictureBox();
             this.pbQR16 = new System.Windows.Forms.PictureBox();
             this.pbQR11 = new System.Windows.Forms.PictureBox();
             this.pbQR3 = new System.Windows.Forms.PictureBox();
+            this.pbQR20 = new System.Windows.Forms.PictureBox();
             this.pbQR6 = new System.Windows.Forms.PictureBox();
             this.pbQR15 = new System.Windows.Forms.PictureBox();
             this.pbQR10 = new System.Windows.Forms.PictureBox();
@@ -81,31 +91,25 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dpAno = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
-            this.pbQR20 = new System.Windows.Forms.PictureBox();
-            this.pbQR21 = new System.Windows.Forms.PictureBox();
-            this.pbQR22 = new System.Windows.Forms.PictureBox();
-            this.pbQR23 = new System.Windows.Forms.PictureBox();
-            this.lblNome20 = new System.Windows.Forms.Label();
-            this.lblNome21 = new System.Windows.Forms.Label();
-            this.lblNome22 = new System.Windows.Forms.Label();
-            this.lblNome23 = new System.Windows.Forms.Label();
-            this.lblNome24 = new System.Windows.Forms.Label();
-            this.pbQR24 = new System.Windows.Forms.PictureBox();
-            this.button3 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbQR24)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbQR19)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbQR23)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbQR14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbQR18)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbQR13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbQR9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbQR22)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbQR8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbQR17)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbQR12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbQR4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbQR21)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbQR7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbQR16)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbQR11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbQR3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbQR20)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbQR6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbQR15)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbQR10)).BeginInit();
@@ -113,11 +117,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbQR5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbQR1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbQR0)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbQR20)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbQR21)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbQR22)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbQR23)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbQR24)).BeginInit();
             this.SuspendLayout();
             // 
             // btnGerar
@@ -125,7 +124,7 @@
             this.btnGerar.BackColor = System.Drawing.Color.Green;
             this.btnGerar.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnGerar.ForeColor = System.Drawing.Color.White;
-            this.btnGerar.Location = new System.Drawing.Point(6, 486);
+            this.btnGerar.Location = new System.Drawing.Point(6, 648);
             this.btnGerar.Name = "btnGerar";
             this.btnGerar.Size = new System.Drawing.Size(128, 53);
             this.btnGerar.TabIndex = 0;
@@ -138,7 +137,7 @@
             this.txtDados.Location = new System.Drawing.Point(12, 86);
             this.txtDados.Multiline = true;
             this.txtDados.Name = "txtDados";
-            this.txtDados.Size = new System.Drawing.Size(249, 263);
+            this.txtDados.Size = new System.Drawing.Size(249, 414);
             this.txtDados.TabIndex = 1;
             // 
             // cboCurso
@@ -151,13 +150,13 @@
             "Eletricista Instalador Predial",
             "Estamparia",
             "Informática Avançada",
-            "Inglês Instermediário",
+            "Inglês Intermediário",
             "Panificação",
             "Programador Web",
             "Promotor de Vendas",
             "Teatro",
             "CJ"});
-            this.cboCurso.Location = new System.Drawing.Point(96, 367);
+            this.cboCurso.Location = new System.Drawing.Point(96, 529);
             this.cboCurso.Name = "cboCurso";
             this.cboCurso.Size = new System.Drawing.Size(165, 23);
             this.cboCurso.TabIndex = 3;
@@ -230,6 +229,24 @@
             this.panel1.TabIndex = 5;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // pbQR24
+            // 
+            this.pbQR24.Location = new System.Drawing.Point(788, 562);
+            this.pbQR24.Name = "pbQR24";
+            this.pbQR24.Size = new System.Drawing.Size(100, 100);
+            this.pbQR24.TabIndex = 3;
+            this.pbQR24.TabStop = false;
+            // 
+            // lblNome24
+            // 
+            this.lblNome24.AutoSize = true;
+            this.lblNome24.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblNome24.Location = new System.Drawing.Point(788, 665);
+            this.lblNome24.Name = "lblNome24";
+            this.lblNome24.Size = new System.Drawing.Size(97, 13);
+            this.lblNome24.TabIndex = 8;
+            this.lblNome24.Text = "Nome do Usuário";
+            // 
             // pbQR19
             // 
             this.pbQR19.Location = new System.Drawing.Point(788, 420);
@@ -267,6 +284,16 @@
             this.lblNome9.Size = new System.Drawing.Size(97, 13);
             this.lblNome9.TabIndex = 8;
             this.lblNome9.Text = "Nome do Usuário";
+            // 
+            // lblNome23
+            // 
+            this.lblNome23.AutoSize = true;
+            this.lblNome23.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblNome23.Location = new System.Drawing.Point(594, 665);
+            this.lblNome23.Name = "lblNome23";
+            this.lblNome23.Size = new System.Drawing.Size(97, 13);
+            this.lblNome23.TabIndex = 8;
+            this.lblNome23.Text = "Nome do Usuário";
             // 
             // lblNome4
             // 
@@ -309,6 +336,16 @@
             this.lblNome8.TabIndex = 8;
             this.lblNome8.Text = "Nome do Usuário";
             // 
+            // lblNome22
+            // 
+            this.lblNome22.AutoSize = true;
+            this.lblNome22.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblNome22.Location = new System.Drawing.Point(402, 665);
+            this.lblNome22.Name = "lblNome22";
+            this.lblNome22.Size = new System.Drawing.Size(97, 13);
+            this.lblNome22.TabIndex = 8;
+            this.lblNome22.Text = "Nome do Usuário";
+            // 
             // lblNome3
             // 
             this.lblNome3.AutoSize = true;
@@ -350,6 +387,16 @@
             this.lblNome7.TabIndex = 8;
             this.lblNome7.Text = "Nome do Usuário";
             // 
+            // lblNome21
+            // 
+            this.lblNome21.AutoSize = true;
+            this.lblNome21.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblNome21.Location = new System.Drawing.Point(209, 665);
+            this.lblNome21.Name = "lblNome21";
+            this.lblNome21.Size = new System.Drawing.Size(97, 13);
+            this.lblNome21.TabIndex = 8;
+            this.lblNome21.Text = "Nome do Usuário";
+            // 
             // lblNome2
             // 
             this.lblNome2.AutoSize = true;
@@ -390,6 +437,16 @@
             this.lblNome6.Size = new System.Drawing.Size(97, 13);
             this.lblNome6.TabIndex = 8;
             this.lblNome6.Text = "Nome do Usuário";
+            // 
+            // lblNome20
+            // 
+            this.lblNome20.AutoSize = true;
+            this.lblNome20.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblNome20.Location = new System.Drawing.Point(10, 665);
+            this.lblNome20.Name = "lblNome20";
+            this.lblNome20.Size = new System.Drawing.Size(97, 13);
+            this.lblNome20.TabIndex = 8;
+            this.lblNome20.Text = "Nome do Usuário";
             // 
             // lblNome1
             // 
@@ -443,6 +500,14 @@
             this.lblNome0.Text = "Nome do Usuário";
             this.lblNome0.Click += new System.EventHandler(this.lblNome0_Click);
             // 
+            // pbQR23
+            // 
+            this.pbQR23.Location = new System.Drawing.Point(594, 562);
+            this.pbQR23.Name = "pbQR23";
+            this.pbQR23.Size = new System.Drawing.Size(100, 100);
+            this.pbQR23.TabIndex = 3;
+            this.pbQR23.TabStop = false;
+            // 
             // pbQR14
             // 
             this.pbQR14.Location = new System.Drawing.Point(788, 287);
@@ -474,6 +539,14 @@
             this.pbQR9.Size = new System.Drawing.Size(100, 100);
             this.pbQR9.TabIndex = 3;
             this.pbQR9.TabStop = false;
+            // 
+            // pbQR22
+            // 
+            this.pbQR22.Location = new System.Drawing.Point(402, 562);
+            this.pbQR22.Name = "pbQR22";
+            this.pbQR22.Size = new System.Drawing.Size(100, 100);
+            this.pbQR22.TabIndex = 3;
+            this.pbQR22.TabStop = false;
             // 
             // pbQR8
             // 
@@ -507,6 +580,14 @@
             this.pbQR4.TabIndex = 3;
             this.pbQR4.TabStop = false;
             // 
+            // pbQR21
+            // 
+            this.pbQR21.Location = new System.Drawing.Point(209, 562);
+            this.pbQR21.Name = "pbQR21";
+            this.pbQR21.Size = new System.Drawing.Size(100, 100);
+            this.pbQR21.TabIndex = 3;
+            this.pbQR21.TabStop = false;
+            // 
             // pbQR7
             // 
             this.pbQR7.Location = new System.Drawing.Point(402, 154);
@@ -538,6 +619,14 @@
             this.pbQR3.Size = new System.Drawing.Size(100, 100);
             this.pbQR3.TabIndex = 3;
             this.pbQR3.TabStop = false;
+            // 
+            // pbQR20
+            // 
+            this.pbQR20.Location = new System.Drawing.Point(10, 562);
+            this.pbQR20.Name = "pbQR20";
+            this.pbQR20.Size = new System.Drawing.Size(100, 100);
+            this.pbQR20.TabIndex = 3;
+            this.pbQR20.TabStop = false;
             // 
             // pbQR6
             // 
@@ -600,7 +689,7 @@
             this.button1.BackColor = System.Drawing.Color.DarkRed;
             this.button1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(140, 486);
+            this.button1.Location = new System.Drawing.Point(140, 648);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(121, 53);
             this.button1.TabIndex = 6;
@@ -613,7 +702,7 @@
             this.button2.BackColor = System.Drawing.Color.MidnightBlue;
             this.button2.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(6, 545);
+            this.button2.Location = new System.Drawing.Point(6, 707);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(255, 59);
             this.button2.TabIndex = 7;
@@ -635,7 +724,7 @@
             // 
             this.lblSelecioneCurso.AutoSize = true;
             this.lblSelecioneCurso.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblSelecioneCurso.Location = new System.Drawing.Point(12, 365);
+            this.lblSelecioneCurso.Location = new System.Drawing.Point(12, 527);
             this.lblSelecioneCurso.Name = "lblSelecioneCurso";
             this.lblSelecioneCurso.Size = new System.Drawing.Size(54, 21);
             this.lblSelecioneCurso.TabIndex = 8;
@@ -647,7 +736,7 @@
             this.cbSemestre.Items.AddRange(new object[] {
             "1º Semestre",
             "2º Semestre"});
-            this.cbSemestre.Location = new System.Drawing.Point(96, 405);
+            this.cbSemestre.Location = new System.Drawing.Point(96, 567);
             this.cbSemestre.Name = "cbSemestre";
             this.cbSemestre.Size = new System.Drawing.Size(165, 23);
             this.cbSemestre.TabIndex = 9;
@@ -656,7 +745,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(12, 403);
+            this.label1.Location = new System.Drawing.Point(12, 565);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(78, 21);
             this.label1.TabIndex = 8;
@@ -664,7 +753,7 @@
             // 
             // dpAno
             // 
-            this.dpAno.Location = new System.Drawing.Point(96, 444);
+            this.dpAno.Location = new System.Drawing.Point(96, 606);
             this.dpAno.MinDate = new System.DateTime(2022, 1, 1, 0, 0, 0, 0);
             this.dpAno.Name = "dpAno";
             this.dpAno.Size = new System.Drawing.Size(165, 23);
@@ -674,118 +763,17 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(12, 444);
+            this.label2.Location = new System.Drawing.Point(12, 606);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(41, 21);
             this.label2.TabIndex = 8;
             this.label2.Text = "Ano:";
             // 
-            // pbQR20
-            // 
-            this.pbQR20.Location = new System.Drawing.Point(10, 562);
-            this.pbQR20.Name = "pbQR20";
-            this.pbQR20.Size = new System.Drawing.Size(100, 100);
-            this.pbQR20.TabIndex = 3;
-            this.pbQR20.TabStop = false;
-            // 
-            // pbQR21
-            // 
-            this.pbQR21.Location = new System.Drawing.Point(209, 562);
-            this.pbQR21.Name = "pbQR21";
-            this.pbQR21.Size = new System.Drawing.Size(100, 100);
-            this.pbQR21.TabIndex = 3;
-            this.pbQR21.TabStop = false;
-            // 
-            // pbQR22
-            // 
-            this.pbQR22.Location = new System.Drawing.Point(402, 562);
-            this.pbQR22.Name = "pbQR22";
-            this.pbQR22.Size = new System.Drawing.Size(100, 100);
-            this.pbQR22.TabIndex = 3;
-            this.pbQR22.TabStop = false;
-            // 
-            // pbQR23
-            // 
-            this.pbQR23.Location = new System.Drawing.Point(594, 562);
-            this.pbQR23.Name = "pbQR23";
-            this.pbQR23.Size = new System.Drawing.Size(100, 100);
-            this.pbQR23.TabIndex = 3;
-            this.pbQR23.TabStop = false;
-            // 
-            // lblNome20
-            // 
-            this.lblNome20.AutoSize = true;
-            this.lblNome20.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblNome20.Location = new System.Drawing.Point(10, 665);
-            this.lblNome20.Name = "lblNome20";
-            this.lblNome20.Size = new System.Drawing.Size(97, 13);
-            this.lblNome20.TabIndex = 8;
-            this.lblNome20.Text = "Nome do Usuário";
-            // 
-            // lblNome21
-            // 
-            this.lblNome21.AutoSize = true;
-            this.lblNome21.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblNome21.Location = new System.Drawing.Point(209, 665);
-            this.lblNome21.Name = "lblNome21";
-            this.lblNome21.Size = new System.Drawing.Size(97, 13);
-            this.lblNome21.TabIndex = 8;
-            this.lblNome21.Text = "Nome do Usuário";
-            // 
-            // lblNome22
-            // 
-            this.lblNome22.AutoSize = true;
-            this.lblNome22.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblNome22.Location = new System.Drawing.Point(402, 665);
-            this.lblNome22.Name = "lblNome22";
-            this.lblNome22.Size = new System.Drawing.Size(97, 13);
-            this.lblNome22.TabIndex = 8;
-            this.lblNome22.Text = "Nome do Usuário";
-            // 
-            // lblNome23
-            // 
-            this.lblNome23.AutoSize = true;
-            this.lblNome23.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblNome23.Location = new System.Drawing.Point(594, 665);
-            this.lblNome23.Name = "lblNome23";
-            this.lblNome23.Size = new System.Drawing.Size(97, 13);
-            this.lblNome23.TabIndex = 8;
-            this.lblNome23.Text = "Nome do Usuário";
-            // 
-            // lblNome24
-            // 
-            this.lblNome24.AutoSize = true;
-            this.lblNome24.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblNome24.Location = new System.Drawing.Point(788, 665);
-            this.lblNome24.Name = "lblNome24";
-            this.lblNome24.Size = new System.Drawing.Size(97, 13);
-            this.lblNome24.TabIndex = 8;
-            this.lblNome24.Text = "Nome do Usuário";
-            // 
-            // pbQR24
-            // 
-            this.pbQR24.Location = new System.Drawing.Point(788, 562);
-            this.pbQR24.Name = "pbQR24";
-            this.pbQR24.Size = new System.Drawing.Size(100, 100);
-            this.pbQR24.TabIndex = 3;
-            this.pbQR24.TabStop = false;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(108, 649);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 11;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1278, 778);
-            this.Controls.Add(this.button3);
+            this.ClientSize = new System.Drawing.Size(1278, 788);
             this.Controls.Add(this.dpAno);
             this.Controls.Add(this.cbSemestre);
             this.Controls.Add(this.label2);
@@ -800,23 +788,30 @@
             this.Controls.Add(this.txtDados);
             this.Controls.Add(this.btnGerar);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbQR24)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbQR19)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbQR23)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbQR14)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbQR18)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbQR13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbQR9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbQR22)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbQR8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbQR17)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbQR12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbQR4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbQR21)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbQR7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbQR16)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbQR11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbQR3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbQR20)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbQR6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbQR15)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbQR10)).EndInit();
@@ -824,11 +819,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbQR5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbQR1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbQR0)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbQR20)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbQR21)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbQR22)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbQR23)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbQR24)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -899,6 +889,5 @@
         private PictureBox pbQR22;
         private PictureBox pbQR21;
         private PictureBox pbQR20;
-        private Button button3;
     }
 }

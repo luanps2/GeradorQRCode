@@ -2,6 +2,7 @@ using MessagingToolkit.QRCode.Codec;
 using System;
 using System.Drawing;
 using System.Windows.Forms;
+using System.Diagnostics;
 
 namespace GeradorQRCode
 {
@@ -48,6 +49,18 @@ namespace GeradorQRCode
 
         private void button1_Click(object sender, EventArgs e)
         {
+            //create encoder object
+            MessagingToolkit.QRCode.Codec.QRCodeEncoder qe = new MessagingToolkit.QRCode.Codec.QRCodeEncoder();
+
+            //set error correction level to Q = 25%
+            qe.QRCodeErrorCorrect = MessagingToolkit.QRCode.Codec.QRCodeEncoder.ERROR_CORRECTION.Q;
+
+            //here comes work-around #1
+            qe.QRCodeVersion = 0;
+
+            //here comes work-around #2, using utf8 
+            
+
             try
             {
                 QRCodeEncoder qrCodecEncoder = new QRCodeEncoder();
@@ -58,6 +71,9 @@ namespace GeradorQRCode
                 qrCodecEncoder.QRCodeScale = 2;
                 qrCodecEncoder.QRCodeVersion = 0;
                 qrCodecEncoder.QRCodeErrorCorrect = QRCodeEncoder.ERROR_CORRECTION.Q;
+                
+                
+
 
                 string[] nomes = txtDados.Text.Split(
                     new string[] { Environment.NewLine, ";" },
@@ -76,8 +92,8 @@ namespace GeradorQRCode
                 {
                     Image imagemQRCode;
 
-                    imagemQRCode = qrCodecEncoder.Encode(nome + " - " + cboCurso.Text);
-
+                    
+                    imagemQRCode = qrCodecEncoder.Encode(nome + " - " + cboCurso.Text, System.Text.Encoding.UTF8);
 
                     var nomePicturebox = "pbQR" + posicaoContadora;
                     var nomeLabel = "lblNome" + posicaoContadora;
@@ -152,70 +168,83 @@ namespace GeradorQRCode
 
         private void button2_Click(object sender, EventArgs e)
         {
-            string[] nomes = txtDados.Text.Split(
-                new string[] { Environment.NewLine, ";" },
-                   StringSplitOptions.None);
 
-            string user = Directory.GetParent(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData)).FullName;
-            if (Environment.OSVersion.Version.Major >= 6)
-            {
-                user = Directory.GetParent(user).ToString();
-            }
-
-            string path = @user + "\\" + "Pictures" + "\\" + "QRCodes" + "\\" + cboCurso.Text + "\\" + dpAno.Text + " - " + cbSemestre.Text;
-
-            //string path = @"C:" + "\\" + cboCurso.Text + "\\" +  dpAno.Text + " - " + cbSemestre.Text;
-
-            int posicaoContadora = 0;
-            foreach (var nome in nomes)
+            try
             {
 
-                using (SaveFileDialog saveFileDialog = new SaveFileDialog() { Filter = @"JPG Image(*.jpg) | *.jpg | BMP Image(*.bmp) | *.bmp| PNG Image(*.png) | *.png" })
+                string[] nomes = txtDados.Text.Split(
+               new string[] { Environment.NewLine, ";" },
+                  StringSplitOptions.None);
+
+                string user = Directory.GetParent(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData)).FullName;
+                if (Environment.OSVersion.Version.Major >= 6)
+                {
+                    user = Directory.GetParent(user).ToString();
+                }
+
+                string path = @user + "\\" + "Pictures" + "\\" + "QRCodes" + "\\" + cboCurso.Text + "\\" + dpAno.Text + " - " + cbSemestre.Text;
+
+                //string path = @"C:" + "\\" + cboCurso.Text + "\\" +  dpAno.Text + " - " + cbSemestre.Text;
+
+                int posicaoContadora = 0;
+                foreach (var nome in nomes)
                 {
 
-                    var nomePicturebox = "pbQR" + posicaoContadora;
-
-                    var nomeLabel = "lblNome" + posicaoContadora;
-
-                    var nomesQR = panel1.Controls.Find(nomeLabel, true);
-
-                    var imgsQR = panel1.Controls.Find(nomePicturebox, true);
-
-                    //if (saveFileDialog.ShowDialog() == DialogResult.OK)
-                    //{
-                    bool DiretorioExiste = Directory.Exists(path);
-
-                    if (!DiretorioExiste)
+                    using (SaveFileDialog saveFileDialog = new SaveFileDialog() { Filter = @"JPG Image(*.jpg) | *.jpg | BMP Image(*.bmp) | *.bmp| PNG Image(*.png) | *.png" })
                     {
-                        DirectoryInfo di = Directory.CreateDirectory(path);
 
+                        var nomePicturebox = "pbQR" + posicaoContadora;
 
+                        var nomeLabel = "lblNome" + posicaoContadora;
 
-                        foreach (PictureBox imgQR in imgsQR)
+                        var nomesQR = panel1.Controls.Find(nomeLabel, true);
+
+                        var imgsQR = panel1.Controls.Find(nomePicturebox, true);
+
+                        //if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                        //{
+                        bool DiretorioExiste = Directory.Exists(path);
+
+                        if (!DiretorioExiste)
                         {
-                            if (imgQR.Image != null)
+                            DirectoryInfo di = Directory.CreateDirectory(path);
+
+
+
+                            foreach (PictureBox imgQR in imgsQR)
                             {
-                                imgQR.Image.Save(path + @"\" + nome + ".png");
+                                if (imgQR.Image != null)
+                                {
+                                    imgQR.Image.Save(path + @"\" + nome + ".png");
+                                }
+
+                            }
+
+
+                        }
+                        else
+                        {
+                            foreach (PictureBox imgQR in imgsQR)
+                            {
+                                if (imgQR.Image != null)
+                                {
+                                    imgQR.Image.Save(path + @"\" + nome + ".png");
+                                }
                             }
 
                         }
-
-                        MessageBox.Show("QRCodes do curso de " + cboCurso.Text + " \nsalvos na pasta \n" + path + "\n com sucesso!");
                     }
-                    else
-                    {
-                        foreach (PictureBox imgQR in imgsQR)
-                        {
-                            if (imgQR.Image != null)
-                            {
-                                imgQR.Image.Save(path + @"\" + nome + ".png");
-                            }
-                        }
-                        MessageBox.Show("QRCodes salvos na pasta \n" + path + "\n com sucesso!");
-                    }
+                    posicaoContadora++;
                 }
-                posicaoContadora++;
+                MessageBox.Show("QRCodes do curso de " + cboCurso.Text + " \nsalvos na pasta \n" + path + "\n com sucesso!", "QR Codes Salvos", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
             }
+            catch (Exception erro)
+            {
+
+                MessageBox.Show("Não foi possivel salvar os QRCodes, Erro: " + erro.ToString());            }
+           
         }
 
 
@@ -271,6 +300,8 @@ namespace GeradorQRCode
                 posicaoContadora++;
             }
             txtDados.Text = "";
+            cboCurso.Text = "";
+            cbSemestre.Text = "";
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -305,14 +336,20 @@ namespace GeradorQRCode
 
         private void button3_Click(object sender, EventArgs e)
         {
-            string user = Directory.GetParent(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData)).FullName;
-            if (Environment.OSVersion.Version.Major >= 6)
-            {
-                user = Directory.GetParent(user).ToString();
-            }
+        
+        }
 
-            string path = @user + "\\" + "Pictures" + "\\" + "QRCodes" + "\\" + cboCurso.Text + "\\" + dpAno.Text + " - " + cbSemestre.Text;
-            MessageBox.Show(path);
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start("https://www.google.com/");
+        }
+
+        private void linkLabel1_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.linkLabel1.LinkVisited = true;
+
+            // Navigate to a URL.
+            System.Diagnostics.Process.Start("http://www.microsoft.com");
         }
     }
 
