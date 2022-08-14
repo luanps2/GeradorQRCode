@@ -152,11 +152,9 @@ namespace GeradorQRCode
 
         private void button2_Click(object sender, EventArgs e)
         {
-            int posicaoContadora = 0;
-
-            var nomePicturebox = "pbQR" + posicaoContadora;
-
-            var imgsQR = panel1.Controls.Find(nomePicturebox, true);
+            string[] nomes = txtDados.Text.Split(
+                new string[] { Environment.NewLine, ";" },
+                   StringSplitOptions.None);
 
             string user = Directory.GetParent(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData)).FullName;
             if (Environment.OSVersion.Version.Major >= 6)
@@ -168,25 +166,56 @@ namespace GeradorQRCode
 
             //string path = @"C:" + "\\" + cboCurso.Text + "\\" +  dpAno.Text + " - " + cbSemestre.Text;
 
-            using (SaveFileDialog saveFileDialog = new SaveFileDialog() { Filter = @"" })
+            int posicaoContadora = 0;
+            foreach (var nome in nomes)
             {
 
-                if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                using (SaveFileDialog saveFileDialog = new SaveFileDialog() { Filter = @"JPG Image(*.jpg) | *.jpg | BMP Image(*.bmp) | *.bmp| PNG Image(*.png) | *.png" })
                 {
-                    foreach (PictureBox imgQR in imgsQR)
-                    {
-                        if (imgQR.Image != null)
-                        {
-                            imgQR.Image.Save(path + @"\" + imgQR + ".png");
-                            posicaoContadora++;
-                        }
-                    }
-                  
-                   
-                   
-                }
-            }
 
+                    var nomePicturebox = "pbQR" + posicaoContadora;
+
+                    var nomeLabel = "lblNome" + posicaoContadora;
+
+                    var nomesQR = panel1.Controls.Find(nomeLabel, true);
+
+                    var imgsQR = panel1.Controls.Find(nomePicturebox, true);
+
+                    //if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                    //{
+                    bool DiretorioExiste = Directory.Exists(path);
+
+                    if (!DiretorioExiste)
+                    {
+                        DirectoryInfo di = Directory.CreateDirectory(path);
+
+
+
+                        foreach (PictureBox imgQR in imgsQR)
+                        {
+                            if (imgQR.Image != null)
+                            {
+                                imgQR.Image.Save(path + @"\" + nome + ".png");
+                            }
+
+                        }
+
+                        MessageBox.Show("QRCodes do curso de " + cboCurso.Text + " \nsalvos na pasta \n" + path + "\n com sucesso!");
+                    }
+                    else
+                    {
+                        foreach (PictureBox imgQR in imgsQR)
+                        {
+                            if (imgQR.Image != null)
+                            {
+                                imgQR.Image.Save(path + @"\" + nome + ".png");
+                            }
+                        }
+                        MessageBox.Show("QRCodes salvos na pasta \n" + path + "\n com sucesso!");
+                    }
+                }
+                posicaoContadora++;
+            }
         }
 
 
@@ -281,8 +310,8 @@ namespace GeradorQRCode
             {
                 user = Directory.GetParent(user).ToString();
             }
-           
-            string path = @user + "\\" + "Pictures" + "\\" +"QRCodes" + "\\" +cboCurso.Text + "\\" + dpAno.Text + " - " + cbSemestre.Text;
+
+            string path = @user + "\\" + "Pictures" + "\\" + "QRCodes" + "\\" + cboCurso.Text + "\\" + dpAno.Text + " - " + cbSemestre.Text;
             MessageBox.Show(path);
         }
     }
